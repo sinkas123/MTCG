@@ -33,10 +33,11 @@ public class UserRepoImpl implements UserRepository{
             while(resultSet.next())
             {
                 user = new User(
-                        resultSet.getInt(1),
-                        resultSet.getString(2),
-                        resultSet.getString(3),
-                        resultSet.getInt(4));
+                        resultSet.getInt("id"), // Use column names for clarity
+                        resultSet.getString("username"),
+                        resultSet.getString("password"), // Assuming you want to retrieve this
+                        resultSet.getInt("coins"));
+
             }
             return user;
         } catch (SQLException e) {
@@ -58,10 +59,11 @@ public class UserRepoImpl implements UserRepository{
             while(resultSet.next())
             {
                 User user = new User(
-                        resultSet.getInt(1),
-                        resultSet.getString(2),
-                        resultSet.getString(3),
-                        resultSet.getInt(4));
+                        resultSet.getInt("id"),
+                        resultSet.getString("username"),
+                        resultSet.getString("password"),
+                        resultSet.getInt("coins"));
+
                 userRows.add(user);
             }
 

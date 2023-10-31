@@ -1,15 +1,14 @@
 package user.service;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import httpserver.http.ContentType;
 import httpserver.http.HttpStatus;
 import httpserver.server.Request;
 import httpserver.server.Response;
 import user.model.User;
 import user.persistance.UnitOfWork;
-import user.persistance.repo.UserRepository;
 import user.persistance.repo.UserRepoImpl;
-import com.fasterxml.jackson.core.JsonProcessingException;
-
+import user.persistance.repo.UserRepository;
 
 
 public class UserService extends AbstractService {
